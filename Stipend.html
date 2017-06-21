@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Stipend Reporter</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div style="float: left;">
+		<table>
+			<tbody>
+				<tr>
+					<td>Annual Rate $</td>
+					<td><input min="0.00" name="AnnualRate" step="1000" type="number" value="0"></td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="table">
+			<tbody>
+				<tr>
+					<td></td>
+					<td>Fall</td>
+					<td>Spring</td>
+					<td>Summer</td>
+				</tr>
+				<tr>
+					<td># of Assignments per semester</td>
+					<td><input min="0.00" name="FallAssignments" type="number" value="0"></td>
+					<td><input min="0.00" name="SpringAssignments" type="number" value="0"></td>
+					<td><input min="0.00" name="SummerAssignments" type="number" value="0"></td>
+				</tr>
+				<tr>
+					<td>Stipend Amount per semester</td>
+					<td><input min="0.00" name="FallRate" type="number" value="0"></td>
+					<td><input min="0.00" name="SpringRate" type="number" value="0"></td>
+					<td><input min="0.00" name="SummerRate" type="number" value="0"></td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<table class="table">
+			<tbody>
+				<tr>
+					<td># of Assignments per semester</td>
+					<td><input class="results" disabled="disabled" name="TotalFallAssign" readonly="readonly" type="number"></td>
+					<td><input class="results" disabled="disabled" name="TotalSpringAssign" readonly="readonly" type="number"></td>
+					<td><input class="results" disabled="disabled" name="TotalSummerAssign" readonly="readonly" type="number"></td>
+				</tr>
+				<tr>
+					<td>Monthly Stipend Amount</td>
+					<td><input class="results" disabled="disabled" name="MonthlyFall" readonly="readonly" type="number"></td>
+					<td><input class="results" disabled="disabled" name="MonthlySpring" readonly="readonly" type="number"></td>
+					<td><input class="results" disabled="disabled" name="MonthlySummer" readonly="readonly" type="number"></td>
+				</tr>
+				<tr>
+					<td>Account Distribution %</td>
+					<td><input class="results" disabled="disabled" name="FallAcctDist" readonly="readonly" type="number"> %</td>
+					<td><input class="results" disabled="disabled" name="SpringAcctDist" readonly="readonly" type="number"> %</td>
+					<td><input class="results" disabled="disabled" name="SummerAcctDist" readonly="readonly" type="number"> %</td>
+				</tr>
+			</tbody>	
+		</table>
+		<div align="center">
+			<button onclick="getRates()" type="button">Get Rates</button> <button onclick="resetFields()" type="button">Reset</button>
+		</div>
+	</div>
+
+	<div style="float: left; clear: both;">
+		<ul>
+			<li>Fill out each box shown, even if that means leaving certain boxes with 0.</li>
+			<li>Click the Get Rates button to populate the results of the table.</li>
+			<li>Click the Reset button to reset the calculator to default values.</li>
+			<li>Note: If you are using Internet Explorer, click the Allow Blocked Content button to allow the script to execute.</li>
+			<li>If calculating a 9 month stipend, divide stipend amount by 2 and enter each half value in Fall and Spring</li>
+		</ul>
+	</div>
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
